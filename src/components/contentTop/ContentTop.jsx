@@ -55,7 +55,12 @@ const ContentTop = () => {
                     : "bg-white"
                 }   rounded-sm max-w-max p-3`}
               >
-                <img className="w-14 h-14 " src={work?.img} alt="" />
+                <img
+                  loading="lazy"
+                  className="w-14 h-14 "
+                  src={work?.img}
+                  alt=""
+                />
               </div>
               <h3
                 className={`${
@@ -101,7 +106,12 @@ const ContentTop = () => {
               } p-8  rounded-3xl hover:bg-p1 transition-all duration-300`}
             >
               <div className="bg-gradient-to-b from-[#EEEDFC] to-[#EEEDFC00] w-[88px] h-[88px] flex justify-center items-center  rounded-full mx-auto">
-                <img className={`  w-10 h-10`} src={service?.img} alt="sdf" />
+                <img
+                  loading="lazy"
+                  className={`  w-10 h-10`}
+                  src={service?.img}
+                  alt="sdf"
+                />
               </div>
               <h3 className="px-4 text-center text-[24px] mt-4 font-bold text-workText">
                 {service?.title}
@@ -128,22 +138,22 @@ const ContentTop = () => {
           pb-[102px] "
         >
           <div>
-            <img src={casio} alt="Casio" />
+            <img loading="lazy" src={casio} alt="Casio" />
           </div>
           <div>
-            <img src={amazon} alt="Amazon" />
+            <img loading="lazy" src={amazon} alt="Amazon" />
           </div>
           <div>
-            <img src={moonstar} alt="Moonstar" />
+            <img loading="lazy" src={moonstar} alt="Moonstar" />
           </div>
           <div>
-            <img src={start} alt="Start" />
+            <img loading="lazy" src={start} alt="Start" />
           </div>
           <div>
-            <img src={startPeople} alt="Start People" />
+            <img loading="lazy" src={startPeople} alt="Start People" />
           </div>
           <div>
-            <img src={randstad} alt="Randstad" />
+            <img loading="lazy" src={randstad} alt="Randstad" />
           </div>
         </div>
 
@@ -176,6 +186,7 @@ const ContentTop = () => {
               <div className="flex gap-12">
                 <div>
                   <img
+                    loading="lazy"
                     className={`${
                       priority?.id === 3 ? " w-[150px]" : ""
                     } border`}
@@ -233,7 +244,7 @@ const ContentTop = () => {
           "
         >
           <div className="absolute top-0">
-            <img src={merchant} alt="" />
+            <img loading="lazy" src={merchant} alt="" />
           </div>
           <div className="w-[673px]">
             <h1 className="text-[40px] font-extrabold text-white">
@@ -255,7 +266,12 @@ const ContentTop = () => {
           </div>
 
           <div className="absolute right-[46px]">
-            <img className="" src="/src/assets/location-merchant.png" alt="" />
+            <img
+              loading="lazy"
+              className=""
+              src="/src/assets/location-merchant.png"
+              alt=""
+            />
           </div>
         </div>
       </section>
@@ -282,7 +298,12 @@ const ContentTop = () => {
               className="bg-white border transition-all duration-200 border-background hover:border-deepBlue cursor-pointer hover:shadow p-4 rounded-[10px] flex items-center gap-4"
             >
               <div>
-                <img className="w-[50px] h-[50px]" src={industry?.img} alt="" />
+                <img
+                  loading="lazy"
+                  className="w-[50px] h-[50px]"
+                  src={industry?.img}
+                  alt=""
+                />
               </div>
               <div>
                 {" "}

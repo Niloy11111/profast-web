@@ -37,7 +37,7 @@ const Navbar = () => {
             <li className="navIcon">Pricing</li>
           </AnchorLink>
 
-          <AnchorLink offset="50" href="#beRider">
+          <AnchorLink offset="250" href="#beRider">
             <li className="hover:cursor-pointer py-[11px] px-[19px] hover:font-bold bg-p1 text-[#5B6A2E] rounded-full">
               Be a Rider
             </li>

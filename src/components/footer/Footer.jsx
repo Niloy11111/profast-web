@@ -66,16 +66,16 @@ const Footer = () => {
       {/*  social icons */}
       <div className="flex justify-center gap-6 mt-8 items-center">
         <div>
-          <img src={socialOne} alt="" />
+          <img loading="lazy" src={socialOne} alt="" />
         </div>
         <div>
-          <img src={socialTwo} alt="" />
+          <img loading="lazy" src={socialTwo} alt="" />
         </div>
         <div>
-          <img src={socialThree} alt="" />
+          <img loading="lazy" src={socialThree} alt="" />
         </div>
         <div>
-          <img src={socialFour} alt="" />
+          <img loading="lazy" src={socialFour} alt="" />
         </div>
       </div>
     </footer>

@@ -32,7 +32,11 @@ const Banner = () => {
                 <picture className="">
                   <source srcSet={banner?.avif} type="image/avif" />
                   <source srcSet={banner.webp} type="image/webp" />
-                  <img className="rounded-4xl" src={banner.png} alt="" />
+                  <img
+                    className="w-full  rounded-4xl"
+                    src={banner.png}
+                    alt=""
+                  />
                 </picture>
               </div>
             </CarouselItem>
@@ -41,7 +45,6 @@ const Banner = () => {
         <CarouselPrevious className="bg-navArrow cursor-pointer ml-[50px]     text-p1" />
         <CarouselNext className="cursor-pointer mr-[50px]  bg-[#03464D]  font-bold   text-white" />
       </Carousel>
-      sdfsd
     </div>
   );
 };

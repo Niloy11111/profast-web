@@ -37,7 +37,7 @@ const ContentBottom = () => {
   return (
     <section className="mt-[100px]">
       <div className="max-w-max mx-auto">
-        <img src={customerTop} alt="" />
+        <img loading="lazy" src={customerTop} alt="" />
       </div>
       {/* What our customers are sayings */}
       <div>
@@ -61,7 +61,7 @@ const ContentBottom = () => {
                 idx === 2 ? "max-h-max opacity-100 " : "mt-[50px] opacity-30"
               }`}
             >
-              <img src={reviewQuote} alt="" />
+              <img loading="lazy" src={reviewQuote} alt="" />
 
               <p className="mt-2 font-medium text-workDesc">
                 A posture corrector works by providing support and gentle
@@ -86,6 +86,7 @@ const ContentBottom = () => {
               <div className="flex gap-4 mt-6">
                 <div>
                   <img
+                    loading="lazy"
                     className="w-[48px] h-[48px] rounded-full"
                     src={testimonial?.customerImage}
                     alt=""
@@ -110,12 +111,13 @@ const ContentBottom = () => {
             className="w-10 h-10 hover:shadow-lg cursor-pointer rounded-full bg-white flex justify-center items-center hover:bg-gray-50 transition-colors "
             onClick={prevSlide}
           >
-            <img src={arrowleft} alt="" />
+            <img loading="lazy" src={arrowleft} alt="" />
           </div>
 
           <div className="flex gap-2 items-center">
             {testimonials?.map((_, idx) => (
               <img
+                loading="lazy"
                 key={idx}
                 src={idx === currentIndex ? ellipseTwo : ellipseSix}
                 alt=""
@@ -129,7 +131,7 @@ const ContentBottom = () => {
             className="w-10 rounded-full cursor-pointer h-10  hover:shadow-lg bg-p1 flex justify-center items-center hover:opacity-80 transition-opacity"
             onClick={nextSlide}
           >
-            <img src={arrowright} alt="" />
+            <img loading="lazy" src={arrowright} alt="" />
           </div>
         </div>
       </div>

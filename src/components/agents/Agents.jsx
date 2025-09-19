@@ -12,7 +12,7 @@ const Agents = () => {
       <section className="customWidth  bg-white rounded-4xl flex justify-center items-center py-20 gap-20">
         <div>
           <div className="">
-            <img src={deliveryman} alt="" />
+            <img loading="lazy" src={deliveryman} alt="" />
           </div>
 
           <h1 className="mt-4 mainTitle text-left ">How Earning Works</h1>
@@ -53,7 +53,7 @@ const Agents = () => {
         </div>
 
         <div>
-          <img src={worker} alt="" />
+          <img loading="lazy" src={worker} alt="" />
         </div>
       </section>
       <Rider />
@@ -70,6 +70,7 @@ const Agents = () => {
           {agents?.map((agent) => (
             <div key={agent?.id} className="bg-white p-4 rounded-2xl">
               <img
+                loading="lazy"
                 className="h-[303px] w-[270px] rounded-xl"
                 src={agent?.img}
                 alt=""
