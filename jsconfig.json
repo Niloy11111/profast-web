@@ -1,0 +1,24 @@
+{
+  "files": [],
+  "references": [],
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "exclude": ["node_modules", "**/node_modules/*"]
+}
+
+// old one , for shadcn use in javascript i need to do the avobe
+// {
+//   "compilerOptions": {
+//     "target": "es6",
+//     "module": "commonjs",
+//     "allowSyntheticDefaultImports": true
+//   },
+//   "exclude": ["node_modules", "**/node_modules/*"]
+// }
