@@ -3,6 +3,7 @@ import Pricing from "../pricing/Pricing";
 import { agents } from "./agent.constants";
 import Rider from "./Rider";
 import worker from "/src/assets/agent-pending.png";
+import deliveryman from "/src/assets/tiny-deliveryman.png";
 
 const Agents = () => {
   return (
@@ -11,7 +12,7 @@ const Agents = () => {
       <section className="customWidth  bg-white rounded-4xl flex justify-center items-center py-20 gap-20">
         <div>
           <div className="">
-            <img src="/src/assets/tiny-deliveryman.png" alt="" />
+            <img src={deliveryman} alt="" />
           </div>
 
           <h1 className="mt-4 mainTitle text-left ">How Earning Works</h1>

@@ -3,13 +3,13 @@ import { industries } from "./industry.constants";
 import { priorities } from "./priorities.constants";
 import { services } from "./services.constants";
 import { works } from "./works.constants.";
+import merchant from "/src/assets/be-a-merchant-bg.png";
 import amazon from "/src/assets/brands/amazon.png";
 import casio from "/src/assets/brands/casio.png";
 import moonstar from "/src/assets/brands/moonstar.png";
 import randstad from "/src/assets/brands/randstad.png";
 import startPeople from "/src/assets/brands/start-people 1.png";
 import start from "/src/assets/brands/start.png";
-
 const ContentTop = () => {
   return (
     <section className="mt-[60px] ">
@@ -233,7 +233,7 @@ const ContentTop = () => {
           "
         >
           <div className="absolute top-0">
-            <img src="/src/assets/be-a-merchant-bg.png" alt="" />
+            <img src={merchant} alt="" />
           </div>
           <div className="w-[673px]">
             <h1 className="text-[40px] font-extrabold text-white">
