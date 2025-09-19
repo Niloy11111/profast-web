@@ -2,6 +2,7 @@ import AnchorLink from "react-anchor-link-smooth-scroll";
 import logo from "/src/assets/logo.png";
 
 const Navbar = () => {
+  console.log("sdlfj");
   return (
     <div className="py-[20px] mt-[32px] rounded-lg px-[32px] customWidth bg-white flex justify-between items-center">
       <div>
