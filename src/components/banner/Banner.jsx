@@ -15,7 +15,10 @@ import banner3_avif from "/src/assets/banner/banner3.avif";
 import banner3_png from "/src/assets/banner/banner3.png";
 import banner3_webp from "/src/assets/banner/banner3.webp";
 
+import { useState } from "react";
+
 const Banner = () => {
+  const [loading, setLoading] = useState(true);
   const banners = [
     { avif: banner1_avif, webp: banner1_webp, png: banner1_png },
     { avif: banner2_avif, webp: banner2_webp, png: banner2_png },

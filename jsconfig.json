@@ -1,14 +1,9 @@
 {
-  "files": [],
-  "references": [],
   "compilerOptions": {
-    "target": "es6",
-    "module": "commonjs",
-    "allowSyntheticDefaultImports": true,
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["./src/*"]
-    }
+    "baseUrl": "src",
+    "paths": { "@/*": ["*"] },
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true
   },
   "exclude": ["node_modules", "**/node_modules/*"]
 }
