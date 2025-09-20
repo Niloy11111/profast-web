@@ -3,7 +3,7 @@ import { Check } from "lucide-react";
 import { pricingPlans } from "./pricingPlans";
 const Pricing = () => {
   return (
-    <section id="pricing" className="mt-20 customWidth">
+    <section id="pricing" className="mt-24 customWidth">
       <h1 className="  mainTitle">Plans & Pricing</h1>
       <p className="commonDescription">
         Our maximum is their minimum — unlimited units for unlimited value.

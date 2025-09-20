@@ -220,9 +220,7 @@ const ContentTop = () => {
                 <div>
                   <img
                     loading="lazy"
-                    className={`${
-                      priority?.id === 3 ? " w-[150px]" : ""
-                    } border`}
+                    className={`${priority?.id === 3 ? " w-[150px]" : ""} `}
                     src={priority?.img}
                     alt=""
                   />

@@ -10,6 +10,7 @@ const Agents = () => {
   return (
     <div className="mb-20">
       {/* How Earning Works */}
+
       <motion.div
         variants={{
           hidden: { opacity: 0, y: 50 },
@@ -66,11 +67,10 @@ const Agents = () => {
           <img loading="lazy" src={worker} alt="" />
         </div>
       </motion.div>
-      <Rider />
 
       {/* Our Top Agents */}
-      <section id="about" className="w-[1283px] mx-auto">
-        <h1 className=" mt-[68px] mainTitle">Our Top Agents</h1>
+      <section id="about" className="w-[1283px] mx-auto mt-24">
+        <h1 className="  mainTitle">Our Top Agents</h1>
         <p className="commonDescription">
           Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet
           consectetur adipisicing elit. adipisicing elit.
@@ -106,6 +106,17 @@ const Agents = () => {
           ))}
         </motion.div>
       </section>
+
+      <div className="">
+        <h1 className="mainTitle mt-24 ">Flexible Earning Opportunity</h1>
+        <p className="commonDescription">
+          Enhance posture, mobility, and well-being effortlessly with Posture
+          Pro. Achieve proper alignment, reduce <br /> pain, and strengthen your
+          body with ease!
+        </p>
+      </div>
+
+      <Rider />
 
       {/*       <Pricing /> */}
       <Pricing />

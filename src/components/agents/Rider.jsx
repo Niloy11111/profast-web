@@ -12,7 +12,7 @@ const Rider = () => {
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
-      className="customWidth mt-20 py-20 px-[102px] rounded-4xl bg-white "
+      className="customWidth mt-10 py-20 px-[102px] rounded-4xl bg-white "
     >
       <h1 className="mainTitle text-left">Be a Rider</h1>
       <p className="text-blackNav mt-4 pb-[50px] ">
