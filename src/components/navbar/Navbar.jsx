@@ -1,8 +1,8 @@
 import AnchorLink from "react-anchor-link-smooth-scroll";
+import { Link } from "react-router-dom";
 import logo from "/src/assets/logo.png";
 
 const Navbar = () => {
-  console.log("sdlfj");
   return (
     <div className="py-[20px] mt-[32px] rounded-lg px-[32px] customWidth bg-white flex justify-between items-center">
       <div>
@@ -37,18 +37,23 @@ const Navbar = () => {
             <li className="navIcon">Pricing</li>
           </AnchorLink>
 
-          <AnchorLink offset="250" href="#beRider">
-            <li className="hover:cursor-pointer py-[11px] px-[19px] hover:font-bold bg-p1 text-[#5B6A2E] rounded-full">
-              Be a Rider
-            </li>
+          <AnchorLink offset="-220" href="#beRider">
+            <li className="navIcon">Be a Rider</li>
           </AnchorLink>
         </ul>
       </div>
 
       <div className="flex items-center gap-4">
-        <button className="navSignIn">Sign In</button>
+        <Link to="/login">
+          <button className="navSignIn  hover:bg-deepBlue hover:text-white">
+            Sign In
+          </button>
+        </Link>
         <div className="flex items-center">
-          <button className="navBeRider">Sign Up</button>
+          <AnchorLink offset="-220" href="#beRider">
+            <button className="navBeRider">Be a rider</button>
+          </AnchorLink>
+
           <button className="bg-navArrow rounded-full w-[56px] h-[56px] flex items-center justify-center">
             <svg
               className=""

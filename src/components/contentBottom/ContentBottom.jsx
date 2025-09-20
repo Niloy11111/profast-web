@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { useState } from "react";
 import { testimonials } from "./customers.constants";
 import customerTop from "/src/assets/customer-top.png";
@@ -35,7 +36,16 @@ const ContentBottom = () => {
   const visibleTestimonials = getVisibleTestimonials();
 
   return (
-    <section className="mt-[100px]">
+    <motion.div
+      variants={{
+        hidden: { opacity: 0, y: 50 },
+        visible: { opacity: 1, y: 0 },
+      }}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2 }}
+      className="mt-[100px]"
+    >
       <div className="max-w-max mx-auto">
         <img loading="lazy" src={customerTop} alt="" />
       </div>
@@ -135,7 +145,7 @@ const ContentBottom = () => {
           </div>
         </div>
       </div>
-    </section>
+    </motion.div>
   );
 };
 

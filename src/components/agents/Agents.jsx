@@ -1,15 +1,25 @@
+import { motion } from "framer-motion";
+
 import FrequentQuestion from "../contentBottom/FrequentQuestion";
 import Pricing from "../pricing/Pricing";
 import { agents } from "./agent.constants";
 import Rider from "./Rider";
 import worker from "/src/assets/agent-pending.png";
 import deliveryman from "/src/assets/tiny-deliveryman.png";
-
 const Agents = () => {
   return (
-    <section className="mb-20">
+    <div className="mb-20">
       {/* How Earning Works */}
-      <section className="customWidth  bg-white rounded-4xl flex justify-center items-center py-20 gap-20">
+      <motion.div
+        variants={{
+          hidden: { opacity: 0, y: 50 },
+          visible: { opacity: 1, y: 0 },
+        }}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+        className="customWidth  bg-white rounded-4xl flex justify-center items-center py-20 gap-20"
+      >
         <div>
           <div className="">
             <img loading="lazy" src={deliveryman} alt="" />
@@ -55,18 +65,27 @@ const Agents = () => {
         <div>
           <img loading="lazy" src={worker} alt="" />
         </div>
-      </section>
+      </motion.div>
       <Rider />
 
       {/* Our Top Agents */}
-      <section className="w-[1283px] mx-auto">
+      <section id="about" className="w-[1283px] mx-auto">
         <h1 className=" mt-[68px] mainTitle">Our Top Agents</h1>
         <p className="commonDescription">
           Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet
           consectetur adipisicing elit. adipisicing elit.
         </p>
 
-        <div className="grid grid-cols-4 gap-6 mt-12">
+        <motion.div
+          variants={{
+            hidden: { opacity: 0, y: 50 },
+            visible: { opacity: 1, y: 0 },
+          }}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          className="grid grid-cols-4 gap-6 mt-12"
+        >
           {agents?.map((agent) => (
             <div key={agent?.id} className="bg-white p-4 rounded-2xl">
               <img
@@ -85,7 +104,7 @@ const Agents = () => {
               </div>
             </div>
           ))}
-        </div>
+        </motion.div>
       </section>
 
       {/*       <Pricing /> */}
@@ -95,7 +114,7 @@ const Agents = () => {
       <FrequentQuestion />
 
       {/*  Be a Rider*/}
-    </section>
+    </div>
   );
 };
 

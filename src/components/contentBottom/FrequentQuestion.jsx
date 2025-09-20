@@ -1,7 +1,7 @@
+import { motion } from "framer-motion";
 import { Minus, Plus } from "lucide-react";
 import { useState } from "react";
 import { faqs } from "./faq.constants";
-
 const FrequentQuestion = () => {
   const [currentId, setCurrentId] = useState(null);
 
@@ -24,7 +24,16 @@ const FrequentQuestion = () => {
         with ease!
       </p>
 
-      <section className=" w-[1062px] mx-auto ">
+      <motion.div
+        variants={{
+          hidden: { opacity: 0, y: 50 },
+          visible: { opacity: 1, y: 0 },
+        }}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+        className=" w-[1062px] mx-auto "
+      >
         {faqs.map((item) => (
           <div
             onClick={() => handleVisibility(item?.id)}
@@ -93,7 +102,7 @@ const FrequentQuestion = () => {
             </svg>
           </button>
         </div>
-      </section>
+      </motion.div>
     </div>
   );
 };

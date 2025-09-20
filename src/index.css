@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -8,6 +8,7 @@
 
 @theme {
   --font-Urbanist: "Urbanist", "sans-serif";
+  --font-Inter: "Inter", "sans-serif";
   /* --color-p1: #ff3811; */
 
   --breakpoint-3xs: 328px;
@@ -35,6 +36,7 @@
   --color-formInputBorder: #cbd5e1;
   --color-placeholer: #94a3b8;
   --color-deepBlue: #1d7d70;
+  --color-loginBorder: #cbd5e1;
 }
 
 @theme inline {
@@ -91,9 +93,20 @@ body {
   }
 
   .navIcon {
-    @apply hover:cursor-pointer py-[11px] px-[19px]  hover:font-bold hover:bg-p1 hover:text-[#5B6A2E] rounded-full;
+    @apply hover:cursor-pointer py-[11px] px-[19px] hover:font-bold hover:bg-p1 hover:text-[#5B6A2E] rounded-full transition-all duration-300;
+    position: relative;
   }
 
+  .navIcon::before {
+    content: attr(aria-label);
+    font-weight: bold;
+    height: 0;
+    visibility: hidden;
+    overflow: hidden;
+    user-select: none;
+    pointer-events: none;
+    position: absolute;
+  }
   .navList li {
     @apply text-blackNav font-medium;
   }
@@ -123,7 +136,7 @@ body {
     @apply text-sm font-semibold text-formText mb-[6px];
   }
   .riderFormInput {
-    @apply outline-none placeholder:text-placeholer focus:border-2 focus:border-deepBlue  w-[304px] h-[40px] pl-3 mb-5 border border-formInputBorder rounded-[6px];
+    @apply outline-none placeholder:text-placeholer focus:border-2 focus:border-deepBlue  w-[304px] h-[40px] pl-3 mb-5 border border-formInputBorder  rounded-[6px];
   }
   .addFlex {
     @apply flex justify-center items-center;

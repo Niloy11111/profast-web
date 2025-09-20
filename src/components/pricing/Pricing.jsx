@@ -1,8 +1,9 @@
+import { motion } from "framer-motion";
 import { Check } from "lucide-react";
 import { pricingPlans } from "./pricingPlans";
 const Pricing = () => {
   return (
-    <section className="mt-20 customWidth">
+    <section id="pricing" className="mt-20 customWidth">
       <h1 className="  mainTitle">Plans & Pricing</h1>
       <p className="commonDescription">
         Our maximum is their minimum — unlimited units for unlimited value.
@@ -21,7 +22,16 @@ const Pricing = () => {
         </p>
       </div>
 
-      <div className="grid md:grid-cols-4 grid-cols-1 gap-5 w-[1062px] mx-auto ">
+      <motion.div
+        variants={{
+          hidden: { opacity: 0, y: 50 },
+          visible: { opacity: 1, y: 0 },
+        }}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+        className="grid md:grid-cols-4 grid-cols-1 gap-5 w-[1062px] mx-auto "
+      >
         {pricingPlans?.map((plan, index) => (
           <div
             key={index}
@@ -94,7 +104,7 @@ const Pricing = () => {
             </div>
           </div>
         ))}
-      </div>
+      </motion.div>
 
       <div className="flex  text-center justify-center my-14 ">
         <div className="space-y-4  ">

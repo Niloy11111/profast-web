@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import Extension from "./Extension";
 import { industries } from "./industry.constants";
 import { priorities } from "./priorities.constants";
@@ -41,9 +42,18 @@ const ContentTop = () => {
           How it Works
         </h1>
 
-        <div className="grid grid-cols-4 gap-6">
+        <motion.div
+          variants={{
+            hidden: { opacity: 0, y: 50 },
+            visible: { opacity: 1, y: 0 },
+          }}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          className="grid grid-cols-4 gap-6"
+        >
           {works?.map((work) => (
-            <div
+            <motion.div
               key={work?.id}
               className="p-8 rounded-3xl "
               style={{ backgroundColor: work?.workBg }}
@@ -76,9 +86,9 @@ const ContentTop = () => {
               >
                 {work?.description}
               </p>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </section>
 
       {/* services */}
@@ -97,7 +107,16 @@ const ContentTop = () => {
           deliver on time, every time.
         </p>
 
-        <div className="grid grid-cols-3 gap-6">
+        <motion.div
+          variants={{
+            hidden: { opacity: 0, y: 50 },
+            visible: { opacity: 1, y: 0 },
+          }}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          className="grid grid-cols-3 gap-6"
+        >
           {services?.map((service) => (
             <div
               key={service?.id}
@@ -121,7 +140,7 @@ const ContentTop = () => {
               </p>
             </div>
           ))}
-        </div>
+        </motion.div>
       </section>
 
       {/* We've helped thousands of sales teams */}
@@ -133,7 +152,14 @@ const ContentTop = () => {
           We've helped thousands of sales teams
         </h1>
 
-        <div
+        <motion.div
+          variants={{
+            hidden: { opacity: 0, y: 50 },
+            visible: { opacity: 1, y: 0 },
+          }}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
           className="flex justify-between w-full
           pb-[102px] "
         >
@@ -155,7 +181,7 @@ const ContentTop = () => {
           <div>
             <img loading="lazy" src={randstad} alt="Randstad" />
           </div>
-        </div>
+        </motion.div>
 
         <div className="mb-[80px]">
           <svg width="100%" height="1" className="block">
@@ -174,7 +200,14 @@ const ContentTop = () => {
 
       {/* Live Parcel Tracking*/}
       <section className=" shortWidth">
-        <div
+        <motion.div
+          variants={{
+            hidden: { opacity: 0, y: 50 },
+            visible: { opacity: 1, y: 0 },
+          }}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
           className="grid grid-cols-1 gap-6 w-full
           "
         >
@@ -219,7 +252,7 @@ const ContentTop = () => {
               </div>
             </div>
           ))}
-        </div>
+        </motion.div>
 
         <div className="pt-[80px] mb-[80px]">
           <svg width="100%" height="1" className="block">
@@ -239,7 +272,14 @@ const ContentTop = () => {
       {/* Merchant and Customer Satisfaction */}
 
       <section className="shortWidth ">
-        <div
+        <motion.div
+          variants={{
+            hidden: { opacity: 0, y: 50 },
+            visible: { opacity: 1, y: 0 },
+          }}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
           className="relative bg-workText rounded-4xl w-full p-20 flex justify-between gap-[73px]
           "
         >
@@ -273,7 +313,7 @@ const ContentTop = () => {
               alt=""
             />
           </div>
-        </div>
+        </motion.div>
       </section>
 
       {/* Extension */}
@@ -291,7 +331,16 @@ const ContentTop = () => {
           adipisicing <br /> elit. At, omnis!
         </p>
 
-        <div className="grid grid-cols-4 gap-6 ">
+        <motion.div
+          variants={{
+            hidden: { opacity: 0, y: 50 },
+            visible: { opacity: 1, y: 0 },
+          }}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          className="grid grid-cols-4 gap-6 "
+        >
           {industries?.map((industry) => (
             <div
               key={industry?.id}
@@ -313,7 +362,7 @@ const ContentTop = () => {
               </div>
             </div>
           ))}
-        </div>
+        </motion.div>
       </section>
 
       {/* Ready to wow your customers? */}

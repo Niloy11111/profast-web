@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import logo from "/src/assets/logo.png";
 import socialOne from "/src/assets/socials/social-1.svg";
 import socialTwo from "/src/assets/socials/social-2.svg";
@@ -5,7 +6,16 @@ import socialThree from "/src/assets/socials/social-3.svg";
 import socialFour from "/src/assets/socials/social-4.svg";
 const Footer = () => {
   return (
-    <footer className="bg-footerbg mb-[50px] py-20 rounded-4xl customWidth">
+    <motion.div
+      variants={{
+        hidden: { opacity: 0, y: 50 },
+        visible: { opacity: 1, y: 0 },
+      }}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2 }}
+      className="bg-footerbg mb-[50px] py-20 rounded-4xl customWidth"
+    >
       <div className="flex items-end justify-center">
         <div className="">
           <img src={logo} alt="" />
@@ -78,7 +88,7 @@ const Footer = () => {
           <img loading="lazy" src={socialFour} alt="" />
         </div>
       </div>
-    </footer>
+    </motion.div>
   );
 };
 

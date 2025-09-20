@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import {
   Carousel,
   CarouselContent,
@@ -26,7 +27,18 @@ const Banner = () => {
   ];
 
   return (
-    <div className="customWidth mt-[60px]  relative">
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.5 }}
+      transition={{ duration: 0.5 }}
+      variants={{
+        hidden: { opacity: 0, y: 50 },
+        visible: { opacity: 1, y: 0 },
+      }}
+      div
+      className="customWidth mt-[60px]  relative"
+    >
       <Carousel className="w-full ">
         <CarouselContent>
           {banners.map((banner, index) => (
@@ -48,7 +60,7 @@ const Banner = () => {
         <CarouselPrevious className="bg-navArrow cursor-pointer ml-[50px]     text-p1" />
         <CarouselNext className="cursor-pointer mr-[50px]  bg-[#03464D]  font-bold   text-white" />
       </Carousel>
-    </div>
+    </motion.div>
   );
 };
 

@@ -1,8 +1,17 @@
+import { motion } from "framer-motion";
 import extensionBanner from "/src/assets/extentionBanner.png";
-
 const Extension = () => {
   return (
-    <section className="mt-20 flex justify-between gap-10 items-start shortWidth">
+    <motion.div
+      variants={{
+        hidden: { opacity: 0, y: 50 },
+        visible: { opacity: 1, y: 0 },
+      }}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2 }}
+      className="mt-20 flex justify-between gap-10 items-start shortWidth"
+    >
       <div>
         <h1 className="mainTitle text-left">60+ Premium Modules</h1>
         <p className="text-left  text-xl font-bold text-deepBlue mb-5">
@@ -28,7 +37,7 @@ const Extension = () => {
       <div>
         <img className="w-[650px]" src={extensionBanner} alt="" />
       </div>
-    </section>
+    </motion.div>
   );
 };
 
